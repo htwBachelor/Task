@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Task.Models.EmplyeeInfoDB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEmloyee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VacationDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeDB.FirstName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEmloyee)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartingDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VacationDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeDB.FirstName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idInfo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idInfo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idInfo })
+        </td>
+    </tr>
+}
+
+</table>

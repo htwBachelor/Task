@@ -1,0 +1,66 @@
+﻿@model Task.Models.EmplyeeInfoDB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmplyeeInfoDB</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEmloyee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEmloyee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VacationDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VacationDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeDB.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeDB.FirstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idInfo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

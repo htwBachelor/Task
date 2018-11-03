@@ -1,0 +1,50 @@
+﻿@model Task.Models.EmployeeDB
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeDB</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompaniesDB.NameCompany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompaniesDB.NameCompany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmplyeeInfoDB.IdEmloyee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmplyeeInfoDB.IdEmloyee)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdEmployee }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
